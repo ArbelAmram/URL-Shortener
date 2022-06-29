@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  /* width: 100%; */
+}
+
+/* NavBar */
+
+header {
+  box-sizing: border-box;
+  background-color: #24252a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10%;
+  margin: -8px -8px 0px -8px;
+}
+
+.headline {
+  color: white;
+}
+
+li, a {
+  font-weight: 500;
+  font-size: 30px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.shortUrl {
+  color: rgb(75, 75, 247);
+  cursor: auto;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+  cursor: pointer;
+}
+
+.nav_links li a:active {
+  color: #0088a9;
+}
+
+
+/* New */
+
+input {
+  width: 100%;
+  max-width: 1000px;
+  height: 50px;
+  font-size: 20px;
+  margin: 10px;
+  align-self: center;
+}
+
+button {
+  color: rgb(255, 255, 255);
+  background-color: #00bbf0;
+  border-radius: 10px 10px 10px 10px;
+  border-color: #00bbf0;
+  width: 100px;
+  height: 30px;
+  align-self: end;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #0092ca;
+  border-color: #0092ca;
+  cursor: pointer;
+}
+
+.section {
+  width: 90%;
+  max-width: 1000px;
+  padding: 3% 10% 0% 10%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  align-self: flex-start;
+  font-size: 25px;
+}
+
+
+/* List */
+
+.item {
+  border: solid 1px black;
+}
+
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 1px;
+  overflow-wrap: anywhere;
+}
+
+table tr:nth-child(even){
+  background-color: #f2f2f2;
+  
+}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #a8b3af;
+  color: white;
+}
+
+.url_link {
+  color: rgb(75, 75, 247);
+  cursor: pointer;
+}
