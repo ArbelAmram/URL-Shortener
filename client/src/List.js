@@ -11,16 +11,43 @@ const List = ({urlList, deleteItem}) => {
         let day = date.slice(9,11)
         let newMonth
         switch (month) {
-            case "06":
-                newMonth = "Jun";
-                break;
-            case "07":
-                newMonth = "Jul";
-                break;
+          case "01":
+            newMonth = "Jan";
+            break;
+          case "02":
+            newMonth = "Feb";
+            break;
+          case "03":
+            newMonth = "Mer";
+            break;
+          case "04":
+            newMonth = "Apr";
+            break;
+          case "05":
+            newMonth = "May";
+            break;  
+          case "06":
+            newMonth = "Jun";
+            break;
+          case "07":
+            newMonth = "Jul";
+            break;
+          case "08":
+            newMonth = "Aug";
+            break;
+          case "09":
+            newMonth = "Sep";
+            break;
+          case "10":
+            newMonth = "Oct";
+            break;              
+          case "11":
+            newMonth = "Nov";
+            break;
+          case "12":
+            newMonth = "Dec";
+            break;
             
-            // In case the app should run all year long
-            // I would make all 12 months (cases)
-
             default:
                 break;
         }
