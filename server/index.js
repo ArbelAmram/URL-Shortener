@@ -33,13 +33,13 @@ app.post("/generate", async (req, res) => {
 });
 
 app.post("/insert", async (req, res) => {
-    await urlModel.create({
+    let url = await urlModel.create({
         originalUrl: req.body.originalUrl,
         shortUrl: req.body.shortUrl
     });
 
     try {
-        await urlModel.save()
+        await url.save()
         res.redirect('/')
     }catch (err) {
         console.log(err)
