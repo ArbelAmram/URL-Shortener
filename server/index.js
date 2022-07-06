@@ -18,21 +18,13 @@ app.use(cors());
 
 
 app.post("/generate", async (req, res) => {
-    const urlId = shortId.generate();
-    var url = req.body.originalUrl;
+    var url = req.body.originalUrl
+    var urlId = ''
 
-    if (validUrl.isUri(url)){
-        try {
-            res.status(200)
-            res.send(urlId)
-        }catch (err) {
-            res.status(400)
-            res.send(false)
-        }
-    } 
-    else {
-        res.send("Not a valid url - try again")
-    }
+    if(validUrl.isUri(url)) {
+        urlId = shortId.generate()
+        res.send(urlId) 
+    } else res.send('flase')   
 });
 
 app.post(`/insert`, async (req, res) => {

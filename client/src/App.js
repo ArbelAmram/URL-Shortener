@@ -15,18 +15,10 @@ function App() {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <New 
-                // setOriginalUrl={setOriginalUrl}
-                // generateUrl={generateUrl}
-                // urlId={urlId}
-                // addToTable={addToTable}
-              />
+              <New/>
             </Route>
             <Route exact path="/list">
-              <List 
-                // urlList={urlList}
-                // deleteItem={deleteItem}
-              />
+              <List/>
             </Route>
           </Switch>
         </div>
