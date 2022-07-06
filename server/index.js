@@ -23,9 +23,11 @@ app.post("/generate", async (req, res) => {
 
     if (validUrl.isUri(url)){
         try {
+            res.status(200)
             res.send(urlId)
         }catch (err) {
-            console.log(err)
+            res.status(400)
+            res.send(false)
         }
     } 
     else {

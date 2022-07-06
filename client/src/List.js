@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import './style.css'
-const List = ({urlList, deleteItem}) => {
+
+const List = () => {
+
+  const [urlList, setUrlList] = useState([])
+  
+  const API = 'http://localhost:5000'
+
+  useEffect(() => {
+    axios.get(`${API}/read`).then((response) => {
+    setUrlList(response.data);
+    });
+  }, [])
+
+  const deleteItem = (id) => {
+    axios.delete(`${API}/delete/${id}`)
+  }
 
     function DateAnalysis(dateObject) {
         let date = JSON.stringify(dateObject)

@@ -3,9 +3,7 @@ import axios from 'axios'
 
 import './style.css'
 
-// const New = ({setOriginalUrl, generateUrl, urlId, addToTable}) => {
-    const New = ({addToTable}) => {
-
+const New = () => {
     const [successMsg, setSuccessMsg] = useState("")
     const [errorMsg, setErrorMsg] = useState("")
     const [originalUrl, setOriginalUrl] = useState("")
@@ -13,14 +11,29 @@ import './style.css'
 
     const API = 'http://localhost:5000'
 
-  // generate url-id for original URL
-  const generateUrl = async () => {
-    const response = await axios.post(`${API}/generate`, { originalUrl: originalUrl });
-    setUrlId(response.data);
-  }
+    // generate url-id for original URL
+    const generateUrl = async () => {
+        const response = await axios.post(`${API}/generate`, { originalUrl: originalUrl });
+        
+        if(response.status = 200)
+            {
+                setUrlId(response.data)
+                console.log("response 200")
+            } else { if(response.status = 400) {
+                console.log("reponse 400")
+            } }
+        }
 
-  return (
-    <div>
+        const addToTable = () => {
+        axios.post(`${API}/insert`, {
+            originalUrl: originalUrl,
+            shortUrl: urlId
+        });
+        setOriginalUrl("")
+        setUrlId("")
+        }
+
+    return (
         <div className="app">        
             <div className='section'>
                 <label>URL</label>
@@ -61,8 +74,7 @@ import './style.css'
                 }
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default New
