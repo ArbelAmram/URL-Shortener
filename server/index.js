@@ -16,6 +16,7 @@ mongoose.connect(
 app.use(express.json());
 app.use(cors());
 
+
 app.post("/generate", async (req, res) => {
     const urlId = shortId.generate();
     var url = req.body.originalUrl;
