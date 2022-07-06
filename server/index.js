@@ -32,14 +32,14 @@ app.post("/generate", async (req, res) => {
     }
 });
 
-app.post("/insert", async (req, res) => {
-    let url = await urlModel.create({
+app.post(`/insert`, async (req, res) => {
+    await urlModel.create({
         originalUrl: req.body.originalUrl,
         shortUrl: req.body.shortUrl
     });
 
     try {
-        await url.save()
+        await urlModel.save()
         res.redirect('/')
     }catch (err) {
         console.log(err)
@@ -67,7 +67,8 @@ app.get("/:route", async (req, res) => {
             return res.status(404).json('No url found')
         }
     } catch(err) {
-        res.status(500).json('Server error');
+        console.log(err)
+        res.status(500).json('Server error')
     }
 });
 

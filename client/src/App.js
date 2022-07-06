@@ -35,7 +35,7 @@ function App() {
     Axios.get(`${API}/read`).then((response) => {
     setUrlList(response.data);
     });
-  }, [urlList])
+  }, [])
 
   const deleteItem = (id) => {
     Axios.delete(`${API}/delete/${id}`)
