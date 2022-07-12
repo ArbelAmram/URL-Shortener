@@ -20,11 +20,20 @@ app.use(cors());
 app.post("/generate", async (req, res) => {
     var url = req.body.originalUrl
     var urlId = ''
-
-    if(validUrl.isUri(url)) {
-        urlId = shortId.generate()
-        res.send(urlId) 
-    } else res.send('flase')   
+    valid = validUrl.isUri(url)
+    console.log("did validate? " + valid)
+    
+    if(valid != undefined) {
+        try {
+            urlId = shortId.generate()
+            res.send(urlId)
+        } catch (err) {
+            console.log("err" + err)
+        }
+    } else {
+        res.send('false')
+        return
+    }
 });
 
 app.post(`/insert`, async (req, res) => {
@@ -32,12 +41,14 @@ app.post(`/insert`, async (req, res) => {
         originalUrl: req.body.originalUrl,
         shortUrl: req.body.shortUrl
     });
-
+ 
     try {
         await urlModel.save()
+        console.log("saved to db")
         res.redirect('/')
     }catch (err) {
         console.log(err)
+        res.redirect('/')
     }
 });
 
