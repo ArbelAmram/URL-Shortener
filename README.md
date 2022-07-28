@@ -36,20 +36,3 @@ From the second page, we will be able to access the new URL wich will redirect u
 (common id).</br>
 From the table, we can delete the instances (also from the Database).
 
-<h1>Main screen</h1>
-
-![New](https://user-images.githubusercontent.com/51449659/175254885-40d348d8-4cb9-475a-a063-e9a2dffeed83.jpg)
-
-<h1>Returned value</h1>
-
-![New1](https://user-images.githubusercontent.com/51449659/175254909-0527fc25-11d8-4c3b-8aac-01f03ce1b02d.jpg)
-
-<h1>List of saved URLs</h1>
-
-![List1](https://user-images.githubusercontent.com/51449659/175254930-d97cea33-0942-4084-adc8-25a87be45f5e.jpg)
-
-
-<h1>Screen record of the app work flow</h1>
-
-https://user-images.githubusercontent.com/51449659/175254955-f348275b-5a86-49aa-8cf1-8ca2e07f276e.mp4
-
