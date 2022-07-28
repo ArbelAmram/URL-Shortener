@@ -12,7 +12,7 @@ const New = () => {
 
     
     const msgCleaner = () => {
-        setTimeout(alert('Timeout called!'), 30000)
+        setTimeout(alert('Timeout calledd!'), 30000)
     }
 
     const API = 'http://localhost:5000'
