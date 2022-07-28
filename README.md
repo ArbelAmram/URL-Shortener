@@ -36,10 +36,6 @@ From the second page, we will be able to access the new URL wich will redirect u
 (common id).</br>
 From the table, we can delete the instances (also from the Database).
 
-<h1>an ERD Schema representing the model</h1>
-
-![model schema erd](https://user-images.githubusercontent.com/51449659/175254840-69e8e999-90dd-4cce-a67f-f0a7c4a30939.png)
-
 <h1>Main screen</h1>
 
 ![New](https://user-images.githubusercontent.com/51449659/175254885-40d348d8-4cb9-475a-a063-e9a2dffeed83.jpg)
