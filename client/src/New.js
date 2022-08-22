@@ -7,8 +7,7 @@ const New = () => {
     const [originalUrl, setOriginalUrl] = useState('')
     const [urlId, setUrlId] = useState('')
 
-    const [successMsg, setSuccessMsg] = useState('')
-    const [errorMsg, setErrorMsg] = useState('')
+    const [message, setMessage] = useState('')
 
     
     const msgCleaner = () => {
@@ -29,10 +28,10 @@ const New = () => {
         if(response.data !== 'false' && undefined) {
             setUrlId(response.data)
             console.log("response.data: " + response.data)
-            setSuccessMsg("yupidu") 
+            setMessage('success') 
             msgCleaner()
         } else {
-            setErrorMsg('oh come on')
+            setMessage('failed')
             msgCleaner()
         }
     }
@@ -51,8 +50,7 @@ const New = () => {
 
         setOriginalUrl("")
         setUrlId("")
-        setSuccessMsg("")
-        setErrorMsg("")
+        setMessage("")
     }
 
 
@@ -78,16 +76,10 @@ const New = () => {
                     placeholder='a short URL id will be generate and display here'
                     readOnly
                 />
-                <button 
-                    onClick={addToTable 
-                        // document.getElementById('urlInput').value = ''
-                        // document.getElementById('urlId').value = ''
-                    }
-                >Save</button>
+                <button onClick={addToTable}>Save</button>
             </div>
-            <div className='message'>
-                { errorMsg !== '' ? <h3 className='errorMsg'>{errorMsg}</h3> : successMsg !== '' ? <h3 className='successMsg'>{successMsg}</h3> : <h3>no message</h3>                   
-                }
+            <div className={message ?'message' : ''}>
+                {message ? <h3>{message}</h3> : <h3>try out</h3>}
             </div>
         </div>
     )
