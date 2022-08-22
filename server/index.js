@@ -21,7 +21,7 @@ app.post("/generate", async (req, res) => {
     var url = req.body.originalUrl
     var urlId = ''
     valid = validUrl.isUri(url)
-    console.log("did validate? " + valid)
+    
     
     if(valid != undefined) {
         try {

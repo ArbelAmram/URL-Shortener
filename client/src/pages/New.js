@@ -1,18 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-import './style.css'
+import '../style.css'
 
 const New = () => {
     const [originalUrl, setOriginalUrl] = useState('')
     const [urlId, setUrlId] = useState('')
 
     const [message, setMessage] = useState('')
-
-    
-    const msgCleaner = () => {
-        setTimeout(alert('Timeout calledd!'), 30000)
-    }
 
     const API = 'http://localhost:5000'
 
@@ -27,26 +22,20 @@ const New = () => {
         
         if(response.data !== 'false' && undefined) {
             setUrlId(response.data)
-            console.log("response.data: " + response.data)
             setMessage('success') 
-            msgCleaner()
         } else {
             setMessage('failed')
-            msgCleaner()
         }
     }
     
 
     const addToTable = () => {
-        console.log("pre originalUrl:" + originalUrl)
-        console.log("pre urlId:" + urlId)
         if(urlId !== '' || 'false' || false || undefined) {
-            console.log("insert activated")
             axios.post(`${API}/insert`, {
                 originalUrl: originalUrl,
                 shortUrl: urlId
             });
-        } else console.log("save - not compiled")
+        } 
 
         setOriginalUrl("")
         setUrlId("")

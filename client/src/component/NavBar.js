@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import './style.css'
+import '../style.css'
 
 const NavBar = () => {
   const [newActive, setNewActive] = useState(true)
   const [listActive, setListActive] = useState(false)
 
   return (
-    <div>
-        <header>
+    <>
+      <header>
         <h1 className='headline'>URL Shortener</h1>
         <nav>
           <ul className='nav_links'>
@@ -35,7 +35,7 @@ const NavBar = () => {
           </ul>
         </nav>
       </header>
-    </div>
+    </>
   )
 }
 

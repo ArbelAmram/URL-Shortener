@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-import './style.css'
+import '../style.css'
 
 const List = () => {
   const [urlList, setUrlList] = useState([])
@@ -70,7 +70,7 @@ const List = () => {
   }
 
   return (
-    <div>
+    <>
       <h1>Url List</h1>
       <table>
         <thead>
@@ -95,7 +95,7 @@ const List = () => {
           }
         </tbody>
       </table>
-    </div>
+    </>
   )
 }
 

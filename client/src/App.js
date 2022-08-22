@@ -1,9 +1,9 @@
 import React from 'react'
 import {  BrowserRouter as Router, Route, Switch  } from 'react-router-dom'
 
-import NavBar from './NavBar'
-import New from './New'
-import List from './List'
+import NavBar from './component/NavBar'
+import New from './pages/New'
+import List from './pages/List'
 
 import './style.css'
 
