@@ -6,12 +6,12 @@ import '../style.css'
 const New = () => {
     const [originalUrl, setOriginalUrl] = useState('')
     const [urlId, setUrlId] = useState('')
-
     const [message, setMessage] = useState('')
 
     const API = 'http://localhost:5000'
 
     const generateUrl = async () => {       
+        alert("hello")
         console.log("originalUrl:" + originalUrl)
         
         var response = ''
@@ -44,31 +44,31 @@ const New = () => {
 
 
     return (
-        <div className="app">        
+        <div className='app'>        
             <div className='section'>
                 <label>URL</label>
                 <input 
                     id='urlInput'
-                    type="text" 
+                    type='text' 
                     value={originalUrl}
-                    onChange={e => {setOriginalUrl(e.target.value)}}
-                    placeholder="please insert a url"
+                    onChange={e => setOriginalUrl(e.target.value)}
+                    placeholder='please insert a valid url'
                 />
-                <button onClick={generateUrl}>Shortify</button>
+                <button onClick={() => generateUrl()}>Shortify</button>
             </div>
             <div className='section'>            
                 <label>Result</label>
                 <input 
-                    type="text" 
+                    type='text' 
                     id='urlId'
                     value={urlId}
-                    placeholder='a short URL id will be generate and display here'
+                    placeholder='uniqe id will be generate and display here'
                     readOnly
                 />
-                <button onClick={addToTable}>Save</button>
+                <button onClick={() => addToTable}>Save</button>
             </div>
-            <div className={message ?'message' : ''}>
-                {message ? <h3>{message}</h3> : <h3>try out</h3>}
+            <div className={message ? 'message' : ''}>
+                {message ? <h3>{message}</h3> : <></>}
             </div>
         </div>
     )

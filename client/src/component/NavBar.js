@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 import '../style.css'
 
 const NavBar = () => {
-  const [newActive, setNewActive] = useState(true)
-  const [listActive, setListActive] = useState(false)
+  const [activeBar, setActiveBar] = useState('new')
 
   return (
     <>
@@ -17,20 +16,18 @@ const NavBar = () => {
               <Link 
                 to='/'
                 onClick={()=>{
-                  setNewActive(true)
-                  setListActive(false)
+                  setActiveBar('new')
                 }}
-                className={newActive ? 'active' : ''}
+                className={activeBar === 'new' ? 'active' : ''}
               >New</Link>
             </li>
             <li>
               <Link 
                 to='/list'
                 onClick={()=>{
-                  setNewActive(false)
-                  setListActive(true)
+                  setActiveBar('list')
                 }}
-                className={listActive ? 'active' : ''}
+                className={activeBar === 'list' ? 'active' : ''}
               >List</Link></li>
           </ul>
         </nav>
