@@ -13,7 +13,6 @@ const NavBar = () => {
 
   useEffect(() => {
     window.localStorage.setItem('activeBar', activeBar)
-    console.log(activeBar)
   }, [activeBar]);
 
   return (
