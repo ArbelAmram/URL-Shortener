@@ -1,10 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import '../style.css'
 
 const NavBar = () => {
   const [activeBar, setActiveBar] = useState('new')
+
+  useEffect(() => {
+    const data = window.localStorage.getItem('activeBar')
+    data ? setActiveBar(data) : setActiveBar('new')
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('activeBar', activeBar)
+    console.log(activeBar)
+  }, [activeBar]);
 
   return (
     <>
