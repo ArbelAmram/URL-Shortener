@@ -7,9 +7,17 @@ const shortId = require('shortId')
 
 var validUrl = require('valid-url')
 
+require("dotenv").config()
+
+const mongodb_user = process.env.DB_USER
+const mongodb_password = process.env.DB_PASSWORD
+
+console.log("mongodb_user: " + mongodb_user)
+console.log("mongodb_password: " + mongodb_password)
+
 const mongoose = require('mongoose')
 mongoose.connect(
-    "mongodb+srv://newuser:ArbelPass@url.golxp.mongodb.net/?retryWrites=true&w=majority", 
+    `mongodb+srv://${mongodb_user}:${mongodb_password}@url.golxp.mongodb.net/?retryWrites=true&w=majority`, 
     {
         useNewUrlParser: true,
     }
