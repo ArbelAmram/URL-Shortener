@@ -5,16 +5,16 @@ This is a URL Shortener Full stack application.</br>
 Built with MERN stack: MongoDB, Express, ReactJs, NodeJs
 
 # How to run the project
-    1. `cd client`</br>
-    2. install packages: </br>
-         `npm i axios react-router-dom@5.0.0` </br>
-    3. `npm start` (run react app)</br>
-    4. open a new terminal</br>
-    5. `cd server`</br>
-    6. install packages:</br>
-         `npm i express mongoose nodemon shortid cors valid-url`</br>
-    7. `npm run devStart` (run and listen to express server using nodemon)</br>
-        * script listed in server/package.json/scripts</br>
+1. `cd client`</br>
+2. install packages: </br>
+     `npm i axios react-router-dom@5.0.0` </br>
+3. `npm start` (run react app)</br>
+4. open a new terminal</br>
+5. `cd server`</br>
+6. install packages:</br>
+     `npm i express mongoose nodemon shortid cors valid-url`</br>
+7. `npm run devStart` (run and listen to express server using nodemon)</br>
+    * script listed in server/package.json/scripts</br>
 
 * optional isuue: the db connection (server/index.js/row:10) Is possible by my credentials on mongoDB.</br> make sure to create a new custom connection.</br> 
 
