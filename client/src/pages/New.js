@@ -22,14 +22,14 @@ const New = () => {
         
         if(response.data) {
             setUrlId(response.data)
-            setMessage('A url Id has created successfully') 
+            setMessage('A URL Id has created successfully') 
         } else {
-            setMessage('Failed to generate a url Id - make sure you entered a valid URL')
+            setMessage('Failed to generate a URL Id - make sure you entered a valid URL')
         }
     }
     
 
-    const addToTable = () => {
+    const saveToDB = () => {
         if(urlId) {
             axios.post(`${API}/insert`, {
                 originalUrl: originalUrl,
@@ -64,7 +64,7 @@ const New = () => {
                     placeholder='A unique id will be generate and display here'
                     readOnly
                 />
-                <button onClick={() => addToTable()}>Save to Database</button>
+                <button onClick={() => saveToDB()}>Save to Database</button>
             </div>
             <div className={message ? 'message' : ''}>
                 {message ? <h3>{message}</h3> : <></>}
