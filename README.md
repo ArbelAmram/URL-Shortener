@@ -34,4 +34,4 @@ From the list table, we will be able to delete or access the new URL wich will r
 ![home screen](https://user-images.githubusercontent.com/51449659/187610456-c822c6f2-a56f-4baf-b2d4-da0653082f34.jpg)
 ![new screen](https://user-images.githubusercontent.com/51449659/187610499-3626de11-2b87-423e-a3ed-02a430a6bc97.jpg)
 ![list screen](https://user-images.githubusercontent.com/51449659/187610519-fb4c8a36-c9be-47d8-af08-3f9892a8ef71.jpg)
-[url_shortener presentation.webm](https://user-images.githubusercontent.com/51449659/187651163-4c260ecd-ee31-4447-bec4-8464b4c67a40.webm)
+![url_shortener presentation.webm](https://user-images.githubusercontent.com/51449659/187651163-4c260ecd-ee31-4447-bec4-8464b4c67a40.webm)
