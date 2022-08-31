@@ -1,11 +1,11 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
-const urlModel = require("./models/URL");
+const express = require('express')
+const cors = require('cors')
+const app = express()
+const urlModel = require("./models/URL")
 const shortId = require('shortId')
 var validUrl = require('valid-url')
 
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 mongoose.connect(
     "mongodb+srv://newuser:ArbelPass@url.golxp.mongodb.net/?retryWrites=true&w=majority", 
     {
@@ -13,8 +13,8 @@ mongoose.connect(
     }
 );
 
-app.use(express.json());
-app.use(cors());
+app.use(express.json())
+app.use(cors())
 
 
 app.post("/generate", async (req, res) => {
@@ -55,9 +55,9 @@ app.post(`/insert`, async (req, res) => {
 app.get("/read", async (req, res) => {
     urlModel.find({}, (err, result) => {
         if(err) {
-            res.send(err);
+            res.send(err)
         } else {
-            res.send(result);
+            res.send(result)
         }
     });
 });
@@ -80,7 +80,7 @@ app.get("/:route", async (req, res) => {
 
 app.delete("/delete/:id", async (req, res) => {
     const id = req.params.id;    
-    await urlModel.findByIdAndRemove(id).exec();
+    await urlModel.findByIdAndRemove(id).exec()
 });
 
 app.listen(5000, () => {

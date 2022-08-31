@@ -10,13 +10,13 @@ const List = () => {
 
   useEffect(() => {
     axios.get(`${API}/read`).then((response) => {
-      setUrlList(response.data);
+      setUrlList(response.data)
     });
   }, [])
 
   useEffect(() => {
     axios.get(`${API}/read`).then((response) => {
-      setUrlList(response.data);
+      setUrlList(response.data)
     });
   }, [urlList])
 
@@ -79,7 +79,7 @@ const List = () => {
 
   return (
     <>
-      <h1>Url List</h1>
+      <h1>URL List</h1>
       <table>
         <thead>
           <tr>
@@ -95,7 +95,7 @@ const List = () => {
               return (<tr className="item" key={key}>
                         <td><time>{DateAnalysis(val.date)}</time></td>
                         <td><a href={val.originalUrl} className='url_link'>{val.originalUrl}</a></td>
-                        <td><a href={"http://localhost:5000/" + val.shortUrl} className='shortUrl'>{"http://localhost:5000/" + val.shortUrl}</a></td>
+                        <td><a href="#" className='shortUrl'>{"http://localhost:5000/" + val.shortUrl}</a></td>
                         <td><h3>{val.clicks}</h3></td>
                         <td><button onClick={() => deleteItem(val._id)}>Delete</button></td>
                     </tr>);

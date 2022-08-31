@@ -36,7 +36,6 @@ const New = () => {
                 shortUrl: urlId
             });
         } 
-
         setOriginalUrl("")
         setUrlId("")
         setMessage("")
