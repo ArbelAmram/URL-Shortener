@@ -11,8 +11,8 @@ const New = () => {
     const API = 'http://localhost:5000'
 
     const generateUrl = async () => {       
-        alert("hello")
         console.log("originalUrl:" + originalUrl)
+        console.log("urlId:" + urlId)
         
         var response = ''
 
@@ -20,17 +20,17 @@ const New = () => {
             response = await axios.post(`${API}/generate`, { originalUrl: originalUrl });
         } else return
         
-        if(response.data !== 'false' && undefined) {
+        if(response.data) {
             setUrlId(response.data)
-            setMessage('success') 
+            setMessage('A url Id has created successfully') 
         } else {
-            setMessage('failed')
+            setMessage('Failed to generate a url Id - make sure you entered a valid URL')
         }
     }
     
 
     const addToTable = () => {
-        if(urlId !== '' || 'false' || false || undefined) {
+        if(urlId) {
             axios.post(`${API}/insert`, {
                 originalUrl: originalUrl,
                 shortUrl: urlId
@@ -52,7 +52,7 @@ const New = () => {
                     type='text' 
                     value={originalUrl}
                     onChange={e => setOriginalUrl(e.target.value)}
-                    placeholder='please insert a valid url'
+                    placeholder='Please insert a valid url'
                 />
                 <button onClick={() => generateUrl()}>Shortify</button>
             </div>
@@ -62,10 +62,10 @@ const New = () => {
                     type='text' 
                     id='urlId'
                     value={urlId}
-                    placeholder='uniqe id will be generate and display here'
+                    placeholder='A unique id will be generate and display here'
                     readOnly
                 />
-                <button onClick={() => addToTable}>Save</button>
+                <button onClick={() => addToTable()}>Save to Database</button>
             </div>
             <div className={message ? 'message' : ''}>
                 {message ? <h3>{message}</h3> : <></>}

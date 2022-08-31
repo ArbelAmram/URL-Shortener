@@ -14,6 +14,12 @@ const List = () => {
     });
   }, [])
 
+  useEffect(() => {
+    axios.get(`${API}/read`).then((response) => {
+      setUrlList(response.data);
+    });
+  }, [urlList])
+
   function DateAnalysis(dateObject) {
       let date = JSON.stringify(dateObject)
 
@@ -21,6 +27,7 @@ const List = () => {
       let month = date.slice(6,8)
       let day = date.slice(9,11)
       let newMonth
+      
       switch (month) {
         case "01":
           newMonth = "Jan";
@@ -67,6 +74,7 @@ const List = () => {
 
   const deleteItem = (id) => {
     axios.delete(`${API}/delete/${id}`)
+    
   }
 
   return (
@@ -87,7 +95,7 @@ const List = () => {
               return (<tr className="item" key={key}>
                         <td><time>{DateAnalysis(val.date)}</time></td>
                         <td><a href={val.originalUrl} className='url_link'>{val.originalUrl}</a></td>
-                        <td><a href="/#" className='shortUrl'>{"http://localhost:5000/" + val.shortUrl}</a></td>
+                        <td><a href={"http://localhost:5000/" + val.shortUrl} className='shortUrl'>{"http://localhost:5000/" + val.shortUrl}</a></td>
                         <td><h3>{val.clicks}</h3></td>
                         <td><button onClick={() => deleteItem(val._id)}>Delete</button></td>
                     </tr>);
