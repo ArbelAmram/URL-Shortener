@@ -10,15 +10,12 @@ const New = () => {
 
     const API = 'http://localhost:5000'
 
-    const generateUrl = async () => {       
-        console.log("originalUrl:" + originalUrl)
-        console.log("urlId:" + urlId)
-        
-        var response = ''
+    const generateUrl = async () => {               
+        let response = ''
 
-        if(originalUrl !== '') {
+        if(originalUrl.startsWith('http',0)) {
             response = await axios.post(`${API}/generate`, { originalUrl: originalUrl });
-        } else return
+        } else setMessage('Failed to generate a URL Id - make sure you entered a valid URL') 
         
         if(response.data) {
             setUrlId(response.data)
