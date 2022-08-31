@@ -92,7 +92,7 @@ const List = () => {
         </thead>
         <tbody>
           { urlList.map((val, key) => {
-              return (<tr className="item" key={key}>
+              return (<tr className='item' key={key}>
                         <td><time>{DateAnalysis(val.date)}</time></td>
                         <td><a href={val.originalUrl} className='url_link'>{val.originalUrl}</a></td>
                         <td><a href={"#"} className='shortUrl'>{"http://localhost:5000/" + val.shortUrl}</a></td>
