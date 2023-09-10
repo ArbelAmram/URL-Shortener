@@ -6,29 +6,29 @@ Built with MERN stack: MongoDB, Express, ReactJs, NodeJs
 
 # How to run the project
 1. `cd client`</br>
-2. install packages: </br>
+2. Install packages: </br>
      `npm i axios react-router-dom@5.0.0` </br>
 3. `npm start` (run react app)</br>
-4. open a new terminal</br>
+4. Open a new terminal</br>
 5. `cd server`</br>
-6. install packages:</br>
+6. Install packages:</br>
      `npm i express mongoose nodemon shortid cors valid-url`</br>
 7. `npm run devStart` (run and listen to express server using nodemon)</br>
     * script listed in server/package.json/scripts</br>
 
-* optional isuue: the db connection (server/index.js/row:10) Is possible by my credentials on mongoDB.</br> make sure to create a new custom connection.</br> 
+* optional issue: the db connection (server/index.js/row:10) Is possible by my credentials on mongoDB.</br> Make sure to create a new custom connection.</br> 
 
 # How does the app work???
-From the New page we are presented with 2 input fields.</br>
-when entering a valid URL, by clicking on 'Shortify' a unique id will be created</br>
+From the New page, we are presented with 2 input fields.</br>
+When entering a valid URL, by clicking on 'Shortify' a unique ID will be created</br>
 and appear in the second field. </br>
 * If the URL is invalid an error message will appear instead.</br>
 
 After successfully creating an ID for our original URL, by clicking on "save to Database" a short URL will be created</br>
 and an instance will be added to the database with all the requested information.</br>
-all of our reserved URL instances will appear in the table on the third page (tab 'List').</br>
-From the list table, we will be able to delete or access the new URL wich will redirect us to the original URL</br>
-(using their common id).</br>
+All of our reserved URL instances will appear in the table on the third page (tab 'List').</br>
+From the list table, we will be able to delete or access the new URL which will redirect us to the original URL</br>
+(using their common ID).</br>
 
 # App View
 ![home screen](https://user-images.githubusercontent.com/51449659/187610456-c822c6f2-a56f-4baf-b2d4-da0653082f34.jpg)
