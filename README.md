@@ -12,7 +12,7 @@ Built with MERN stack: MongoDB, Express, ReactJs, NodeJs
 4. Open a new terminal</br>
 5. `cd server`</br>
 6. Install packages:</br>
-     `npm i express mongoose nodemon shortid cors valid-url`</br>
+     `npm i express mongoose nodemon shortid cors valid-URL`</br>
 7. `npm run devStart` (run and listen to express server using nodemon)</br>
     * script listed in server/package.json/scripts</br>
 
