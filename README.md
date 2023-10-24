@@ -2,7 +2,7 @@
 
 This is a URL Shortener Full stack application.</br>
 
-Built with MERN stack: MongoDB, Express, ReactJs, NodeJs
+Built with MERN stack: MongoDB, Express, ReactJs, NodeJs.
 
 # How to run the project
 1. `cd client`</br>
