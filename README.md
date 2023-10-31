@@ -1,4 +1,4 @@
-# url_shortener
+# URL Shortener
 
 This is a URL Shortener Full stack application.</br>
 
