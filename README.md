@@ -1,6 +1,6 @@
 # URL Shortener
 
-This is a URL Shortener Full stack application.</br>
+This is a Full-stack application.</br>
 
 Built with MERN stack: MongoDB, Express, ReactJs, NodeJs.
 
