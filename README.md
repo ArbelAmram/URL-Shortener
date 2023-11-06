@@ -1,8 +1,6 @@
 # URL Shortener
 
-This is a Full-stack application.</br>
-
-Built with MERN stack: MongoDB, Express, ReactJs, NodeJs.
+MERN Full-stack app: MongoDB, Express, ReactJs, NodeJs.
 
 # How to run the project
 1. `cd client`</br>
