@@ -19,7 +19,7 @@ Full-stack app: MongoDB, Express, ReactJs, NodeJs.
 # How does the app work???
 From the New page, we are presented with 2 input fields.</br>
 When entering a valid URL, by clicking on 'Shortify' a unique ID will be created</br>
-and appear in the second field. </br>
+and appear in the second field.</br>
 * If the URL is invalid an error message will appear instead.</br>
 
 After successfully creating an ID for our original URL, by clicking on "save to Database" a short URL will be created</br>
